@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+
+  mongodb:
+    image: mongo:6
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - dd-network
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: dd-backend-container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    networks:
+      - dd-network
+
+  frontend:
+    build: ./frontend
+    container_name: dd-frontend-container
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - dd-network
+
+networks:
+  dd-network:
+
+volumes:
+  mongo-data:
