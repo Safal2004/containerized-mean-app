@@ -85,11 +85,12 @@ http://<EC2-PUBLIC-IP>
 
 ### CI/CD Pipeline
 
-![CI/CD Success](screenshots/cicd/workflow-success.png)
+![CI/CD Success](screenshots/cicd/workflow.png)
 
 ### Docker Hub Images
 
-![Docker Hub Repositories](screenshots/dockerhub/dockerhub-repos.png)
+![Docker Hub Repositories](screenshots/dockerhub/dockerhub-repos1.png)
+![Docker Hub Repositories](screenshots/dockerhub/dockerhub-repos2.png)
 
 ### Running Containers on AWS
 
@@ -97,7 +98,7 @@ http://<EC2-PUBLIC-IP>
 
 ### Application UI
 
-![Application Home](screenshots/deployment/app-home.png)
+![Application Home](screenshots/deployment/app_1.png)
 
 ### Nginx Reverse Proxy
 
